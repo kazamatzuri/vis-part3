@@ -127,3 +127,7 @@ If you take a closer look at the colouring function in our template, you'll see 
 ```
 
 I found this to work fairly well with the examples I tested, but your mileage may vary. Obviously you can increase the exponent to push it more into the red, or vice versa. 
+
+## Code
+
+You can find all of the relevant files [here](https://github.com/kazamatzuri/vis-part3)
