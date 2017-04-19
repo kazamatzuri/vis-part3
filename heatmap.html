@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!--<link rel="stylesheet" href="css/main.css"> -->
+            <style>
+ 
+		table, th, td {
+			width:"100%";
+    		border: 1px solid black;
+    		border-collapse: collapse;
+		}
+		pre {
+			margin:1px;
+		}
+		th {
+			text-align: left;
+		}
+	</style>
+
+	<script>
+	function rgba(r, g,b,a){
+		r = Math.floor(r);
+  		g = Math.floor(g);
+  		b = Math.floor(b);
+  		return ["rgba(",r,",",g,",",b,",",a,")"].join("");
+	}
+	function colorize() {
+		var rows=$("#data tr")
+		var max=Math.max.apply(Math,rows.slice(1,rows.length).map(function(){ return this.childNodes[2].textContent}))
+		for (i=1;i<rows.length;i++){
+			var val=rows[i].childNodes[2].textContent;
+			var c=(Math.pow(1-val/max,3))*255;
+			var col=rgba(255,c,c,0.7);
+			console.log(col);
+			rows[i].style.backgroundColor=col;
+
+		}
+	}
+	</script>
+    </head>
+
+    <body onload="colorize()">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+
+<table id="data">
+<tr><th>Routine</th><th>Line</th><th>Total Time</th><th>Code</th></tr>
+<!--output-->
+<tr><td>%Library.PopulateUtils.1</td><td>1</td><td>0</td><td><pre>" ;%Library.PopulateUtils.1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>2</td><td>0</td><td><pre>" ;(C)InterSystems, generated for class %Library.PopulateUtils.  Do NOT edit. 03/23/2017 09:33:51AM"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>3</td><td>0</td><td><pre>" ;;4D393131;%Library.PopulateUtils"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>4</td><td>0</td><td><pre>" ;"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>5</td><td>0</td><td><pre>"zArrayElement(array)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>6</td><td>0</td><td><pre>" QUIT $s($g(array):$g(array(($zu(165,1,array))+1)),1:"""")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>7</td><td>0</td><td><pre>"zBuildReferenceSample(class,sample,size=500,selpct=25)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>8</td><td>0</td><td><pre>" New count,density,rs,sc"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>9</td><td>0</td><td><pre>" Set density=$s(selpct>90:2,selpct>74:4,selpct>49:6,selpct>39:5,selpct>24:36,selpct>12:7,1:29)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>10</td><td>0</td><td><pre>" Kill sample"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>11</td><td>0</td><td><pre>" Set sample=0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>12</td><td>0</td><td><pre>" QUIT:$g(class)="""""</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>13</td><td>0</td><td><pre>" Set rs=##class(%Library.ResultSet).%New(class_"".Extent"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>14</td><td>0</td><td><pre>" Set sc=rs.Execute()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>15</td><td>0</td><td><pre>" If ('sc) Set rs="""""""" QUIT"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>16</td><td>0</td><td><pre>" For count=1:1 Quit:rs.Next()=0  i '(density#(($zu(165,1,density))+1)) s sample=sample+1,sample(sample)=rs.GetData(1) Quit:sample=size"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>17</td><td>0</td><td><pre>" If (sample/size)<.5,count>sample DO"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>18</td><td>0</td><td><pre>" . Do rs.Close()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>19</td><td>0</td><td><pre>" . Set sc=rs.Execute()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>20</td><td>0</td><td><pre>" . Quit:('sc)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>21</td><td>0</td><td><pre>" . Kill sample"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>22</td><td>0</td><td><pre>" . Set sample=0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>23</td><td>0</td><td><pre>" . For  Quit:rs.Next()=0  s sample=sample+1,sample(sample)=rs.GetData(1) Quit:sample=size"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>24</td><td>0</td><td><pre>" QUIT"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>25</td><td>0</td><td><pre>"zBuildValueSetSQL(cptr,cext,table,column,size=500,verbose=0) public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>26</td><td>0</td><td><pre>" If ('$Get(cptr)) || ('$Get(cext)) || ( table = """" ) || ( column = """" ) Quit $$Error^%apiOBJ(5001,""Invalid BuildValueSet parameters"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>27</td><td>0</td><td><pre>" Set sql = ""select DISTINCT("" _ $Select($zconvert(column,""u"")'[""%EXACT"":""%EXACT(""_column_"")"",1:column) _ "") from "" _ table"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>28</td><td>0</td><td><pre>" Set rs = ##class(%Library.ResultSet).%New()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>29</td><td>0</td><td><pre>" Set sc = rs.Prepare(sql)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>30</td><td>0</td><td><pre>" If ('sc) Quit $$Error^%apiOBJ(5001,""Cannot prepare BuildValueSetSQL dynamic query: "" _ $Get(%msg))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>31</td><td>0</td><td><pre>" Set sc=rs.Execute()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>32</td><td>0</td><td><pre>" If ('sc) Quit $$Error^%apiOBJ(5001,""Cannot execute BuildValueSetSQL dynamic query: "" _ $Get(%msg))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>33</td><td>0</td><td><pre>" Set temp = $Increment(^CacheTemp)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>34</td><td>0</td><td><pre>" s ^CacheTempNodes(""gbl"",$j,$name(^CacheTemp(temp)))=$lb($h,$username)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>35</td><td>0</td><td><pre>" Set ^CacheTemp(temp) = 0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>36</td><td>0</td><td><pre>" If verbose { Write !,sql }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>37</td><td>0</td><td><pre>" Set next = rs.Next()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>38</td><td>0</td><td><pre>" While next {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>39</td><td>0</td><td><pre>" 	Set ^CacheTemp(temp,$Increment(^CacheTemp(temp))) = rs.GetData(1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>40</td><td>0</td><td><pre>" 	If verbose && ('(^CacheTemp(temp)#1000)) { Write ""."" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>41</td><td>0</td><td><pre>" 	Set next = rs.Next()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>42</td><td>0</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>43</td><td>0</td><td><pre>" Set sc = rs.Close()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>44</td><td>0</td><td><pre>" If verbose { Write ""("",^CacheTemp(temp),"")"" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>45</td><td>0</td><td><pre>" Set ^CacheTemp(cptr,cext) = 0, cextcnt = 0, domainsize = ^CacheTemp(temp)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>46</td><td>0</td><td><pre>" If size '< domainsize {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>47</td><td>0</td><td><pre>" 	If verbose { Write !,"" requested number is greater than domain size, taking all values."" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>48</td><td>0</td><td><pre>" 	Merge ^CacheTemp(cptr,cext) = ^CacheTemp(temp)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>49</td><td>0</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>50</td><td>0</td><td><pre>" Else {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>51</td><td>0</td><td><pre>" 	If verbose { Write !,""Selecting "",size,"" random values"" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>52</td><td>0</td><td><pre>" 	While cextcnt < size {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>53</td><td>0</td><td><pre>" 		Set valptr = ($zu(165,1,domainsize)) + 1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>54</td><td>0</td><td><pre>" 		If '$d(^CacheTemp(cptr,cext,""u"",valptr)) {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>55</td><td>0</td><td><pre>" 			Set val = ^CacheTemp(temp,valptr)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>56</td><td>0</td><td><pre>" 			Set cextcnt = $Increment(^CacheTemp(cptr,cext)), ^CacheTemp(cptr,cext,""u"",valptr) = cextcnt, ^CacheTemp(cptr,cext,cextcnt) = val"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>57</td><td>0</td><td><pre>" 			If verbose && ('(cextcnt#1000)) { Write ""."" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>58</td><td>0</td><td><pre>" 		}"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>59</td><td>0</td><td><pre>" 	}"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>60</td><td>0</td><td><pre>" 	Kill ^CacheTemp(cptr,cext,""u"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>61</td><td>0</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>62</td><td>0</td><td><pre>" Kill ^CacheTemp(temp)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>63</td><td>0</td><td><pre>" k ^CacheTempNodes(""gbl"",$j,$name(^CacheTemp(temp)))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>64</td><td>0</td><td><pre>" QUIT 1 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>65</td><td>0</td><td><pre>"zCDate(format=1,min=30000,max=55000)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>66</td><td>0</td><td><pre>" If min>max Quit 0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>67</td><td>0</td><td><pre>" Quit $zdate(##class(%Library.PopulateUtils).Date(min,max),format)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>68</td><td>0</td><td><pre>"zCity()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>69</td><td>0</td><td><pre>" n t1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>70</td><td>0</td><td><pre>" s t1=$lb(""Albany"",""Boston"",""Bensonhurst"",""Chicago"",""Denver"",""Elmhurst"",""Fargo"",""Gansevoort"",""Hialeah"",""Islip"",""Jackson"",""Larchmont"",""Miami"",""Newton"",""Oak Creek"",""Pueblo"",""Queensbury"",""Reston"",""St Louis"",""Tampa"",""Ukiah"",""Vail"",""Washington"",""Xavier"",""Youngstown"",""Zanesville"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>71</td><td>0</td><td><pre>" Quit $li(t1,($zu(165,1,$ll(t1)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>72</td><td>0</td><td><pre>"zColor()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>73</td><td>0</td><td><pre>" n t1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>74</td><td>0</td><td><pre>" s t1=$lb(""Red"",""Green"",""Blue"",""Yellow"",""Black"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>75</td><td>0</td><td><pre>" Quit $li(t1,($zu(165,1,$ll(t1)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>76</td><td>0</td><td><pre>"zCompany()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>77</td><td>0</td><td><pre>" New c1,c2,c3"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>78</td><td>0</td><td><pre>" Set c1=$LB(""Compu"",""Dyna"",""Quanta"",""Hyper"",""Meta"",""Kwal"",""Opti"",""Robo"",""Tera"",""Mega"",""Giga"",""Xena"",""Micro"",""Macro"",""Inter"",""Yoyo"",""Medi"",""Pico"",""Accu"",""Globa"",""Octo"",""Cyber"",""Tele"",""Syner"",""Securi"",""Bio"",""Intra"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>79</td><td>0</td><td><pre>" Set c2=$LB(""Dyne"",""Sys"",""Tron"",""Matix"",""mo"",""gy"",""Sonics"",""Calc"",""Tel"",""Soft"",""Dynamics"",""Pedia"",""Systems"",""Net"",""Data"",""Ware"",""Glomerate"",""Lateral"",""Tech"",""Plex"",""Comp"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>80</td><td>0</td><td><pre>" Set c3=$LB("" Inc."","" Corp."","" Media Inc."","" Holdings Inc."","".com"","" LLC."","" Group Ltd."","" Associates"","" Partners"","" Gmbh."")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>81</td><td>0</td><td><pre>" Quit $LI(c1,($zu(165,1,$LL(c1)))+1)_$LI(c2,($zu(165,1,$LL(c2)))+1)_$LI(c3,($zu(165,1,$LL(c3)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>82</td><td>0</td><td><pre>"zCounter(counter=""c"",initial=1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>83</td><td>0</td><td><pre>" If '$Data(^CacheTempPop($j,""c"",counter)) Set ^CacheTempPop($j,""c"",counter) = initial Quit initial"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>84</td><td>0</td><td><pre>" Quit $Increment(^CacheTempPop($j,""c"",counter))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>85</td><td>0</td><td><pre>"zCurrency(min=0,max=10000)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>86</td><td>0</td><td><pre>" Quit ##class(%Library.PopulateUtils).Float(min,max,4)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>87</td><td>0</td><td><pre>"zDate(min,max)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>88</td><td>0</td><td><pre>" if '$Get(min) { set min = 30000 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>89</td><td>0</td><td><pre>" if '$Get(max) { set max = +$h }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>90</td><td>0</td><td><pre>" if min>max Quit 0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>91</td><td>0</td><td><pre>" quit min+($zu(165,1,max-min+1))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>92</td><td>0</td><td><pre>"zExtentValue(cptr,cext)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>93</td><td>0</td><td><pre>" QUIT $s($g(^CacheTemp(cptr,cext)):$g(^CacheTemp(cptr,cext,($zu(165,1,^CacheTemp(cptr,cext)))+1)),1:"""")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>94</td><td>0</td><td><pre>"zFirstName(gender="""")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>95</td><td>0.505440</td><td><pre>" New list"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>96</td><td>0.231771</td><td><pre>" s:$g(gender)="""" gender=($zu(165,1,2))+1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>97</td><td>0.172208</td><td><pre>" If (gender = 1) {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>98</td><td>0.136735</td><td><pre>" Set list = $LB(""Al"",""Alfred"",""Alvin"",""Andrew"",""Angelo"",""Aviel"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>99</td><td>0</td><td><pre>" ""Bart"",""Bill"",""Bob"",""Brendan"",""Brian"",""Buzz"",""Chad"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>100</td><td>0</td><td><pre>" ""Charles"",""Chris"",""Clint"",""Dan"",""Dave"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>101</td><td>0</td><td><pre>" ""David"",""Dick"",""Dmitry"",""Ed"",""Edgar"",""Edward"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>102</td><td>0</td><td><pre>" ""Elmo"",""Elvis"",""Emilio"",""Fred"",""Geoffrey"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>103</td><td>0</td><td><pre>" ""George"",""Howard"",""James"",""Jeff"",""Joe"",""John"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>104</td><td>0</td><td><pre>" ""Jose"",""Joshua"",""Jules"",""Keith"",""Kenny"",""Kevin"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>105</td><td>0</td><td><pre>" ""Lawrence"",""Mark"",""Mario"",""Martin"",""Marvin"",""Michael"",""Milhouse"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>106</td><td>0</td><td><pre>" ""Mo"",""Neil"",""Norbert"",""Orson"",""Patrick"",""Paul"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>107</td><td>0</td><td><pre>" ""Peter"",""Phil"",""Quentin"",""Quigley"",""Ralph"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>108</td><td>0</td><td><pre>" ""Richard"",""Rob"",""Robert"",""Roger"",""Sam"",""Stavros"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>109</td><td>0</td><td><pre>" ""Stuart"",""Ted"",""Terry"",""Umberto"",""Vincent"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>110</td><td>0</td><td><pre>" ""Will"",""William"",""Wolfgang"",""Xavier"",""Zeke"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>111</td><td>0.079706</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>112</td><td>0</td><td><pre>" Else {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>113</td><td>0.139765</td><td><pre>" Set list = $lb(""Agnes"",""Alexandra"",""Alice"",""Amanda"",""Angela"",""Ashley"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>114</td><td>0</td><td><pre>" ""Barb"",""Barbara"",""Belinda"",""Brenda"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>115</td><td>0</td><td><pre>" ""Charlotte"",""Chelsea"",""Christine"",""Christen"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>116</td><td>0</td><td><pre>" ""Danielle"",""Debra"",""Debby"",""Diane"",""Elvira"",""Emily"",""Emma"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>117</td><td>0</td><td><pre>" ""Filomena"",""Frances"",""Gertrude"",""Greta"",""Hannah"",""Heloisa"",""Imelda"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>118</td><td>0</td><td><pre>" ""Jane"",""Janice"",""Jocelyn"",""Josephine"",""Juanita"",""Julie"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>119</td><td>0</td><td><pre>" ""Kim"",""Kirsten"",""Kristen"",""Kyra"",""Laura"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>120</td><td>0</td><td><pre>" ""Linda"",""Lisa"",""Liza"",""Lola"",""Lydia"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>121</td><td>0</td><td><pre>" ""Maria"",""Mary"",""Maureen"",""Michelle"",""Molly"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>122</td><td>0</td><td><pre>" ""Nataliya"",""Natasha"",""Nellie"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>123</td><td>0</td><td><pre>" ""Olga"",""Pam"",""Pat"",""Patricia"",""Phyllis"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>124</td><td>0</td><td><pre>" ""Rhonda"",""Roberta"",""Sally"",""Samantha"",""Sophia"",""Susan"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>125</td><td>0</td><td><pre>" ""Tara"",""Terry"",""Thelma"","</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>126</td><td>0</td><td><pre>" ""Uma"",""Usha"",""Valery"",""Violet"",""Wilma"",""Yan"",""Zelda"",""Zoe"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>127</td><td>0</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>128</td><td>0.778136</td><td><pre>" Quit $LI(list,($zu(165,1,$LL(list)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>129</td><td>0</td><td><pre>"zFloat(min=0,max=10000,scale=0) public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>130</td><td>0</td><td><pre>" If max '> min { Quit """" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>131</td><td>0</td><td><pre>" If scale > 17 { Set scale = 17 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>132</td><td>0</td><td><pre>" Set factor = 10 ** scale"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>133</td><td>0</td><td><pre>" Set minn = (min*factor\1)/factor, maxn = (max*factor\1)/factor"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>134</td><td>0</td><td><pre>" Set range = maxn - minn"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>135</td><td>0</td><td><pre>" If ($Length(range\1) + scale) < 17 { Quit +(((minn * factor) + ($zu(165,1,range * factor + 1))) / factor) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>136</td><td>0</td><td><pre>" set range = $Extract(range,1,17), factor = $Extract(factor,1,17)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>137</td><td>0</td><td><pre>" Set float = minn + ($zu(165,1,range)) + $Select(scale:+(($zu(165,1,factor+1))/factor),1:0)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>138</td><td>0</td><td><pre>" Quit $Select((float<max)&(float>min):float,float'<max:maxn,1:minn) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>139</td><td>0</td><td><pre>"zInteger(min=0,max=1000000000) public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>140</td><td>0.744944</td><td><pre>" if min > max quit 0"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>141</td><td>0.168382</td><td><pre>" set range = max - min + 1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>142</td><td>0.587527</td><td><pre>" if range '> 1E17 { quit min+($zu(165,1,range)) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>143</td><td>0</td><td><pre>" set range1 = ($zu(165,1,1E17))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>144</td><td>0</td><td><pre>" set range2 = ($zu(165,1,range\1E17))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>145</td><td>0</td><td><pre>" quit min + (range2*1E17) + range1 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>146</td><td>0</td><td><pre>"zLastName()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>147</td><td>0.418034</td><td><pre>" New list,x"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>148</td><td>0.230561</td><td><pre>" Set x = ($zu(165,1,26))+1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>149</td><td>0.408435</td><td><pre>" If (x = 1) 	{ Set list = $LB(""Allen"",""Avery"",""Adam"",""Adams"",""Alton"",""Ahmed"",""Anderson"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>150</td><td>0.009086</td><td><pre>" ElseIf (x = 2)	{ Set list = $LB(""Baker"",""Beatty"",""Burroughs"",""Bach"",""Bachman"",""Black"",""Brown"",""Browne"",""Browning"",""Braam"",""Basile"",""Bukowski"",""Bush"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>151</td><td>0.009832</td><td><pre>" ElseIf (x = 3)	{ Set list = $LB(""Chadbourne"",""Cheng"",""Chang"",""Campos"",""Cannon"",""Chadwick"",""Chesire"",""Clinton"",""Clay"",""Connors"",""Cooke"",""Cooper"",""Cerri"",""Cunningham"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>152</td><td>0.009484</td><td><pre>" ElseIf (x = 4)	{ Set list = $LB(""Diavolo"",""DeSantis"",""Djakovic"",""DeLillo"",""Drabek"",""Donaldson"",""Davis"",""Dunlap"",""Duquesnoy"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>153</td><td>0.008917</td><td><pre>" ElseIf (x = 5)	{ Set list = $LB(""Evans"",""Edwards"",""Eisenstien"",""Edison"",""Emerson"",""Eno"",""Eastman"",""Eagleman"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>154</td><td>0.009402</td><td><pre>" ElseIf (x = 6)	{ Set list = $LB(""Frith"",""Fripp"",""Finn"",""Faust"",""Fives"",""Frost"",""Feynman"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>155</td><td>0.008949</td><td><pre>" ElseIf (x = 7)	{ Set list = $LB(""Gaboriault"",""Geoffrion"",""Gomez"",""Gallant"",""Goldman"",""Gore"",""Gibbs"",""Gold"",""Goncharuk"",""Grabscheid"",""Garcia"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>156</td><td>0.009070</td><td><pre>" ElseIf (x = 8)	{ Set list = $LB(""Houseman"",""Huff"",""Hanson"",""Harrison"",""Hills"",""Hertz"",""Hammel"",""Humby"",""Hernandez"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>157</td><td>0.009630</td><td><pre>" ElseIf (x = 9)	{ Set list = $LB(""Isaksen"",""Ironhorse"",""Ipsen"",""Ingrahm"",""Ingersol"",""Iacobelli"",""Ingleman"",""Isaacs"",""Ihringer"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>158</td><td>0.009666</td><td><pre>" ElseIf (x = 10)	{ Set list = $LB(""Jafari"",""Joyce"",""Jackson"",""Jones"",""Johnson"",""Jaynes"",""Jung"",""Jenkins"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>159</td><td>0.009196</td><td><pre>" ElseIf (x = 11)	{ Set list = $LB(""Koivu"",""Kovalev"",""King"",""Klingman"",""Kelvin"",""Klein"",""Klausner"",""Kratzmann"",""Koenig"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>160</td><td>0.008717</td><td><pre>" ElseIf (x = 12)	{ Set list = $LB(""Larson"",""Leiberman"",""Lennon"",""Lepon"",""Levinson"",""Long"",""LaRocca"",""Lee"",""Li"",""Lubbar"",""Love"",""Loveluck"",""Lopez"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>161</td><td>0.009908</td><td><pre>" ElseIf (x = 13)	{ Set list = $LB(""Mara"",""Massias"",""Malkovich"",""Moon"",""Murphy"",""Murray"",""McCormick"",""Macrakis"",""Mailer"",""Munt"",""Martinez"",""Mastrolito"",""Minichillo"",""Monroe"",""Malynko"",""Miller"",""Marks"",""McCoy"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>162</td><td>0.008804</td><td><pre>" ElseIf (x = 14)	{ Set list = $LB(""Noodleman"",""Novello"",""Nagel"",""Nathanson"",""Newton"",""Nelson"",""North"",""Ng"",""Nichols"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>163</td><td>0.009665</td><td><pre>" ElseIf (x = 15)	{ Set list = $LB(""O'Donnell"",""O'Brien"",""O'Rielly"",""Orwell"",""Orlin"",""Ott"",""Olsen"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>164</td><td>0.009716</td><td><pre>" ElseIf (x = 16)	{ Set list = $LB(""Page"",""Paladino"",""Palmer"",""Pantaleo"",""Pape"",""Paraskiv"",""Pascal"",""Perez"",""Peters"",""Peterson"",""Petersburg"",""Pybus"",""Presley"",""Press"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>165</td><td>0.009590</td><td><pre>" ElseIf (x = 17)	{ Set list = $LB(""Quigley"",""Quilty"",""Quince"",""Quincy"",""Quine"",""Quixote"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>166</td><td>0.009117</td><td><pre>" ElseIf (x = 18)	{ Set list = $LB(""Ramsay"",""Ragon"",""Ravazzolo"",""Rogers"",""Rotterman"",""Roentgen"",""Rodriguez"",""Russell"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>167</td><td>0.009201</td><td><pre>" ElseIf (x = 19)	{ Set list = $LB(""Smith"",""Smyth"",""Schultz"",""Schulte"",""Salm"",""Sato"",""Schaefer"",""Simpson"",""Sands"",""Solomon"",""Semmens"",""Sorenson"",""Sverdlov"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>168</td><td>0.009568</td><td><pre>" ElseIf (x = 20)	{ Set list = $LB(""Tesla"",""Tsatsulin"",""Tweed"",""Thompson"",""Taylor"",""Tillem"",""Townsend"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>169</td><td>0.009370</td><td><pre>" ElseIf (x = 21)	{ Set list = $LB(""Ubertini"",""Uhles"",""Ueckert"",""Umansky"",""Uberoth"",""Ulman"",""Underman"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>170</td><td>0.009262</td><td><pre>" ElseIf (x = 22)	{ Set list = $LB(""Van De Griek"",""Vanzetti"",""Vivaldi"",""Vonnegut"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>171</td><td>0.009357</td><td><pre>" ElseIf (x = 23)	{ Set list = $LB(""Waal"",""Walker"",""Wilson"",""Woo"",""Wells"",""Waters"",""Willeke"",""Wijnschenk"",""Waterman"",""Winters"",""White"",""Williams"",""West"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>172</td><td>0.009585</td><td><pre>" ElseIf (x = 24)	{ Set list = $LB(""Xander"",""Xavier"",""Ximines"",""Xerxes"",""Xenia"",""Xiang"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>173</td><td>0.009255</td><td><pre>" ElseIf (x = 25)	{ Set list = $LB(""Young"",""Yeats"",""Yang"",""Yu"",""Yancik"",""Yakulis"",""Yezek"",""Yoders"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>174</td><td>0.008661</td><td><pre>" ElseIf (x = 26)	{ Set list = $LB(""Zemaitis"",""Zubik"",""Zimmerman"",""Zevon"",""Zucherro"",""Zampitello"",""Zweifelhofer"") }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>175</td><td>0.495161</td><td><pre>" Quit $LI(list,($zu(165,1,$LL(list)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>176</td><td>0</td><td><pre>"zMission()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>177</td><td>0</td><td><pre>" New c1,c2,c3,c4,c5,c6"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>178</td><td>0</td><td><pre>" Set c1=$LB(""Leaders in "",""Developers of "",""Providers of "",""Resellers of "",""On-line distributors of "",""Experts in "",""Specializing in the development and manufacturing of "",""Post-sale services for "",""Spearheading the next generation of "",""The industry leader in "",""Enabling individuals and businesses to manage "",""Building shareholder value by delivering "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>179</td><td>0</td><td><pre>" Set c2=$LB("""",""advanced "",""cutting-edge "",""breakthrough "",""complex "",""high-performance "",""scalable "",""just-in-time "",""open "",""personal "",""high-tech "",""high-touch "",""open-source "",""virtual "",""interactive "",""eco-friendly "",""agile "",""cloud-based "",""premise-based "",""sustainable "",""intelligent "",""innovative "",""world-class "",""knowledge-based "",""compliant "",""secure "",""standards-based "",""disruptive "",""non-linear "",""dynamic "",""enhanced "",""real-time "",""synergistic "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>180</td><td>0</td><td><pre>" Set c3=$LB("""",""quantum "",""nano-"",""hyper-"",""optical "",""financial "",""multi-media "",""object-oriented "",""broad-band "",""secure "",""digital "",""enterprise "",""crowd-sourced "",""genetic "",""wireless "",""satellite-based "",""ISO 9003-ready "",""Web 3.0 "",""HTML5 "",""post-Microsoft "",""natural language "",""big data "",""predictive analytic "",""seven-sigma "",""distributed "",""massively-parallel "",""mission-critical "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>181</td><td>0</td><td><pre>" Set c4=$LB("""",""devices and "",""instrumentation "",""graphical "",""XML "",""Internet "",""application development "",""database "",""data warehouse "",""forecasting "",""voice-enabled "",""cold-fusion powered "",""platforms for "",""advanced "",""virtualized "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>182</td><td>0</td><td><pre>" Set c5=$LB(""services "",""technologies "",""media "",""content "",""middle-ware "",""connectivity "",""consulting services "",""gaming "",""models "",""productivity tools "",""instruments "",""marketing services "",""apps "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>183</td><td>0</td><td><pre>" Set c6=$LB(""for on-line commerce."",""for the Financial community."",""for discriminating investors."",""for the Entertainment industry."",""for consumers."",""for the Fortune 5."",""for the Fortune 50."",""for the Fortune 500."",""for the Fortune 5000."",""for the enterprise."",""for the desktop."",""for the Health Care community."",""for mobile devices."",""for social networks."",""for industry and government."",""for emerging markets."",""for industry and academia."",""for capital markets."",""for high-worth individuals."",""for our long-term clients."",""for the pharmaceutical industry."",""for additive manufacturing."")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>184</td><td>0</td><td><pre>" Quit $LI(c1,($zu(165,1,$LL(c1)))+1)_$LI(c2,($zu(165,1,$LL(c2)))+1)_$LI(c3,($zu(165,1,$LL(c3)))+1)_$LI(c4,($zu(165,1,$LL(c4)))+1)_$LI(c5,($zu(165,1,$LL(c5)))+1)_$LI(c6,($zu(165,1,$LL(c6)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>185</td><td>0</td><td><pre>"zName(gender="""")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>186</td><td>5.285027</td><td><pre>" Quit ..LastName()_"",""_..FirstName($g(gender))_"" ""_$C(($zu(165,1,26))+65)_""."""</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>187</td><td>0</td><td><pre>"zPosixTime(min="""",max="""") public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>188</td><td>0</td><td><pre>" 	// If min/max is specified, not the dfault 0001-01-01 00:00:00, and a valid %PosixTime value, convert them to UnixTime"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>189</td><td>0</td><td><pre>" if min'="""" && (min'=-6979664624441081856) && ($zu(1073741926,+min)) { set min=$zu(1073741925,+min) } else { set min=-2208988800 }	// 1900-01-01 00:00:00 is default min value"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>190</td><td>0</td><td><pre>" 	// The datatypes default maxval is 9999-12-31 23:59:59.999999.  If the property does not override that, just use today as the max"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>191</td><td>0</td><td><pre>" if max'="""" && (max'=1406323805406846975) && ($zu(1073741926,+max)) { set max=$zu(1073741925,+max) } else { set max=$zu(188),max=(max-47117)*86400+$p(max,"","",2) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>192</td><td>0</td><td><pre>" 	// min/max are now in UnitTime"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>193</td><td>0</td><td><pre>" set precmin=$l($p(min,""."",2)),precmax=$l($p(max,""."",2))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>194</td><td>0</td><td><pre>" set prec=precmin set:precmax>precmin prec=precmax"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>195</td><td>0</td><td><pre>" set range=max-min+1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>196</td><td>0</td><td><pre>" set value=($zu(165,1,range))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>197</td><td>0</td><td><pre>" set:prec value=+(value_"".""_($zu(165,1,10**prec)))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>198</td><td>0</td><td><pre>" Quit $zu(1073741924,value+min) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>199</td><td>0</td><td><pre>"zProduct()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>200</td><td>0</td><td><pre>" n t1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>201</td><td>0</td><td><pre>" s t1=$lb(""Table"",""Chair"",""Lamp"",""Desk"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>202</td><td>0</td><td><pre>" Quit $li(t1,($zu(165,1,$ll(t1)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>203</td><td>0</td><td><pre>"zRandom(n)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>204</td><td>0</td><td><pre>" Quit ##class(%Library.Populate).Random(n)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>205</td><td>0</td><td><pre>"zSSN()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>206</td><td>0</td><td><pre>" Quit (($zu(165,1,899))+100)_""-""_(($zu(165,1,89))+10)_""-""_(($zu(165,1,8999))+1000)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>207</td><td>0</td><td><pre>"zStreet()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>208</td><td>0</td><td><pre>" n t1,t2"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>209</td><td>0</td><td><pre>" s t1=$lb(""Maple"",""Ash"",""Elm"",""Oak"",""Main"",""First"",""Second"",""Washington"",""Franklin"",""Clinton"",""Madison""), t2=$lb(""Street"",""Avenue"",""Blvd"",""Court"",""Place"",""Drive"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>210</td><td>0</td><td><pre>" Quit (($zu(165,1,9999))+1)_"" ""_$li(t1,($zu(165,1,$ll(t1)))+1)_"" ""_$li(t2,($zu(165,1,$ll(t2)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>211</td><td>0</td><td><pre>"zString(len=1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>212</td><td>0</td><td><pre>" QUIT $e($c(($zu(165,1,26))+65)_($zu(165,1,9999)),1,$s(len>0:len,1:1))"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>213</td><td>0</td><td><pre>"zStringMin(minlen=1,maxlen=1) public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>214</td><td>0</td><td><pre>" if maxlen '< minlen { set len=($zu(165,1,maxlen-minlen+1))+minlen, string="""" for i=1:1:len { Set charn=$s(($zu(165,1,2)):($zu(165,1,26))+65,1:($zu(165,1,26))+97),string=string_$s(charn<123:$c(charn),1:"" "") } quit string } else { quit """" } }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>215</td><td>0</td><td><pre>"zSyllable(maxlen=30)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>216</td><td>0</td><td><pre>" New len,p,s,string"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>217</td><td>0</td><td><pre>" Set len=($zu(165,1,maxlen))+1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>218</td><td>0</td><td><pre>" Set s(1)=$lb(""A"",""I"",""Am"",""An"",""Iso"",""Ic"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>219</td><td>0</td><td><pre>" Set s(2)=$lb(""Lo"",""Ly"",""Re"",""Co"",""To"",""On"",""Op"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>220</td><td>0</td><td><pre>" Set s(3)=$lb(""Com"",""Syn"",""Tri"",""Uni"",""Via"",""Geo"",""Ism"",""Ion"",""Ies"",""Two"",""Pus"",""Tech"",""Quo"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>221</td><td>0</td><td><pre>" Set s(4)=$lb(""Able"",""Cycle"",""Atic"",""Look"",""Mili"",""Nano"",""Octo"",""Pyro"",""Status"",""Kilo"",""Dyna"",""Endo"",""Ecto"",""Gyro"",""Heli"",""Atic"",""Able"",""Look"",""Much"",""Graph"",""Gram"",""Wave"",""Sound"",""Plasm"",""Physical"",""Scope"",""Copter"",""Morph"",""Range"",""Pede"",""Second"",""Zeno"",""Photo"",""Type"",""Much"",""Invent"",""Thetic"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>222</td><td>0</td><td><pre>" Set string="""""</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>223</td><td>0</td><td><pre>" For  q:$l(string)>len  s p=($zu(165,1,4))+1 s string=string_$li(s(p),($zu(165,1,$ll(s(p))))+1) s:($zu(165,1,2)) string=string_"" """</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>224</td><td>0</td><td><pre>" Quit $extract(string,1,len)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>225</td><td>0</td><td><pre>"zTimeStamp(min,max) public {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>226</td><td>0</td><td><pre>" try {"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>227</td><td>0</td><td><pre>" 	if $Get(min) '= """" { set minh = $zdth(min,3) set mindateh = $Piece(minh,"","",1), mintimeh = $Piece(minh,"","",2) } else { set mindateh = """", mintimeh = 0 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>228</td><td>0</td><td><pre>" 	if $Get(max) '= """" { set maxh = $zdth(max,3) set maxdateh = $Piece(maxh,"","",1), maxtimeh = $Piece(maxh,"","",2) } else { set maxdateh = """", maxtimeh = 86399 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>229</td><td>0</td><td><pre>" }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>230</td><td>0</td><td><pre>" catch tException { set mindateh = """", mintimeh = 0, maxdateh = """", maxtimeh = 86399 }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>231</td><td>0</td><td><pre>" Set date=##class(%Library.PopulateUtils).Date(mindateh,maxdateh)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>232</td><td>0</td><td><pre>" Set time=##class(%Library.PopulateUtils).Integer(mintimeh,maxtimeh)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>233</td><td>0</td><td><pre>" Quit $zd(date,3)_"" ""_$zt(time,1) }"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>234</td><td>0</td><td><pre>"zTitle()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>235</td><td>0</td><td><pre>" New t1,t2"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>236</td><td>0</td><td><pre>" Set t1=$LB("""",""Senior "",""Associate "",""Assistant "",""Strategic "",""Global "",""Laboratory "",""Executive "")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>237</td><td>0</td><td><pre>" Set t2=$LB(""Engineer"",""Sales Rep."",""Support Engineer"",""Developer"",""Marketing Manager"",""Accounts Rep."",""Resources Director"",""Director"",""Product Manager"",""Research Asst."",""Systems Engineer"",""Technician"",""WebMaster"",""Administrator"",""Product Specialist"",""Accountant"",""Hygienist"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>238</td><td>0</td><td><pre>" Quit $LI(t1,($zu(165,1,$LL(t1)))+1)_$LI(t2,($zu(165,1,$LL(t2)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>239</td><td>0</td><td><pre>"zUSPhone()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>240</td><td>0</td><td><pre>" Quit (($zu(165,1,799))+200)_""-""_(($zu(165,1,799))+200)_""-""_(($zu(165,1,8999))+1000)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>241</td><td>0</td><td><pre>"zUSState()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>242</td><td>0</td><td><pre>" n t1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>243</td><td>0</td><td><pre>" s t1=$lb(""AK"",""AL"",""AR"",""AZ"",""CA"",""CO"",""CT"",""DE"",""FL"",""GA"",""HI"",""IA"",""ID"",""IL"",""IN"",""KS"",""KY"",""LA"",""MA"",""MD"",""ME"",""MI"",""MN"",""MO"",""MS"",""MT"",""NC"",""ND"",""NE"",""NH"",""NJ"",""NM"",""NV"",""NY"",""OH"",""OK"",""OR"",""PA"",""RI"",""SC"",""SD"",""TN"",""TX"",""UT"",""VT"",""VA"",""WA"",""WI"",""WV"",""WY"")"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>244</td><td>0</td><td><pre>" Quit $li(t1,($zu(165,1,$ll(t1)))+1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>245</td><td>0</td><td><pre>"zUSZip()"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>246</td><td>0</td><td><pre>" Quit (($zu(165,1,89999))+10000)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>247</td><td>0</td><td><pre>"zValueList(vallist)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>248</td><td>0</td><td><pre>" New del"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>249</td><td>0</td><td><pre>" Set del=$e(vallist,1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>250</td><td>0</td><td><pre>" Quit $piece(vallist,del,($zu(165,1,$length(vallist,del)-1))+2)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>251</td><td>0</td><td><pre>"zVarString(maxlen=1)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>252</td><td>0</td><td><pre>" n i,len,string"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>253</td><td>0</td><td><pre>" s:'$g(maxlen) maxlen=1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>254</td><td>0</td><td><pre>" s len=($zu(165,1,maxlen))+1"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>255</td><td>0</td><td><pre>" s string="""""</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>256</td><td>0</td><td><pre>" For i=1:1:len Set string=string_$c(($zu(165,1,64))+32)"</pre></td></tr>
+<tr><td>%Library.PopulateUtils.1</td><td>257</td><td>0</td><td><pre>" QUIT string"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>1</td><td>0</td><td><pre>" ;DataGen.Benchmark.1"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>2</td><td>0</td><td><pre>" ;(C)InterSystems, generated for class DataGen.Benchmark.  Do NOT edit. 03/23/2017 01:58:01PM"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>3</td><td>0</td><td><pre>" ;;535A7433;DataGen.Benchmark"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>4</td><td>0</td><td><pre>" ;"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>5</td><td>0</td><td><pre>"zrunBenchpure(count=300000) public {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>6</td><td>0</td><td><pre>" s types=[""name"",""ssn"",""company"",""title"",""phone"",""city"",""street"",""zip"",""mission"",""state"",""color"",""product"",""string"",""integer"",""float""]"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>7</td><td>0</td><td><pre>" //s types=[""name"",""ssn""]"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>8</td><td>0</td><td><pre>" s iter=types.%GetIterator()"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>9</td><td>0</td><td><pre>" while iter.%GetNext(.key,.v){"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>10</td><td>0</td><td><pre>" 	s start=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>11</td><td>0</td><td><pre>" 	s value={}"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>12</td><td>0</td><td><pre>" 	s value.type=v"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>13</td><td>0</td><td><pre>" 	s name=value.name"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>14</td><td>0</td><td><pre>" 	s type=$E(value.type,1,3)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>15</td><td>0</td><td><pre>" 	for i=1:1:count{"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>16</td><td>0</td><td><pre>" 	  	s ret=""""""""_name_""""""""_"":"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>17</td><td>0</td><td><pre>"    		if type=""int"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>18</td><td>0</td><td><pre>"    			s res=ret_##class(%Library.PopulateUtils).Integer(0,1000)	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>19</td><td>0</td><td><pre>"    		}elseif type=""nam"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>20</td><td>0</td><td><pre>"      			s res= ret_""""""""_##class(%Library.PopulateUtils).Name()_"""""""""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>21</td><td>0</td><td><pre>"       		} elseif type=""flo"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>22</td><td>0</td><td><pre>"    			s res= ret_##class(%Library.PopulateUtils).Float(,,3)     "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>23</td><td>0</td><td><pre>"    		} elseif type=""tit"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>24</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).Title()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>25</td><td>0</td><td><pre>"    		} elseif type=""pho"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>26</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).USPhone()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>27</td><td>0</td><td><pre>"    		} elseif type=""str"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>28</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).Street()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>29</td><td>0</td><td><pre>"    		} elseif type=""zip"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>30</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).USZip()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>31</td><td>0</td><td><pre>"    		} elseif type=""mis"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>32</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).Mission()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>33</td><td>0</td><td><pre>"    		} elseif type=""sta"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>34</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).USState()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>35</td><td>0</td><td><pre>"    		} elseif type=""ssn"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>36</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).SSN()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>37</td><td>0</td><td><pre>"    		} elseif type=""str"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>38</td><td>0</td><td><pre>"    			s res= ret_""""""""_##class(%Library.PopulateUtils).String(5)_"""""""""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>39</td><td>0</td><td><pre>"    		} elseif type=""com"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>40</td><td>0</td><td><pre>"      		s res= ret_""""""""_##class(%Library.PopulateUtils).Company()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>41</td><td>0</td><td><pre>"    		} elseif type=""col"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>42</td><td>0</td><td><pre>"       		s res= ret_""""""""_##class(%Library.PopulateUtils).Color()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>43</td><td>0</td><td><pre>"    		} elseif type=""cit"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>44</td><td>0</td><td><pre>"       		s res= ret_""""""""_##class(%Library.PopulateUtils).City()_"""""""""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>45</td><td>0</td><td><pre>"    		} elseif type=""pro"" {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>46</td><td>0</td><td><pre>"       		s res= ret_""""""""_##class(%Library.PopulateUtils).Product()_""""""""	      "</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>47</td><td>0</td><td><pre>"       	}	  			"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>48</td><td>0</td><td><pre>" 	}"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>49</td><td>0</td><td><pre>" 	s end=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>50</td><td>0</td><td><pre>" 	s total=end-start"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>51</td><td>0</td><td><pre>" 	w v_$C(9)_"" total time:""_total_$C(9)_"" rate:  ""_$NORMALIZE(count/total,2)_"" per second"",!"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>52</td><td>0</td><td><pre>" } }"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>53</td><td>0</td><td><pre>"zrunBenchreal(count=1000000) public {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>54</td><td>0</td><td><pre>" s options={""count"":(count)}"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>55</td><td>0</td><td><pre>" s options.fields=[]"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>56</td><td>0</td><td><pre>" d options.fields.%Push({""name"":""name"",""type"":""name""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>57</td><td>0</td><td><pre>" s options.apikey=""123"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>58</td><td>0</td><td><pre>" s options.namedfields=""false"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>59</td><td>0</td><td><pre>" s options.headers=""false"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>60</td><td>0</td><td><pre>"  //d options.fields.%Push({""name"":""ssn"",""type"":""ssn""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>61</td><td>0</td><td><pre>"  //d options.fields.%Push({""name"":""company"",""type"":""company""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>62</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""title"",""type"":""title""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>63</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""phone"",""type"":""phone""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>64</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""city"",""type"":""city""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>65</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""street"",""type"":""street""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>66</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""zip"",""type"":""zip""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>67</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""mission"",""type"":""mission""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>68</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""state"",""type"":""state""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>69</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""color"",""type"":""color""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>70</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""product"",""type"":""product""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>71</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""string"",""type"":""string""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>72</td><td>0</td><td><pre>" 	d options.fields.%Push({""name"":""Age"",""type"":""integer"",""min"":10,""max"":20})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>73</td><td>0</td><td><pre>" //	d options.fields.%Push({""name"":""float"",""type"":""float""})"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>74</td><td>0</td><td><pre>" s optionsStr=options.%ToJSON()"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>75</td><td>0</td><td><pre>" s file=""/dev/null"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>76</td><td>0</td><td><pre>" o file:""W"""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>77</td><td>0</td><td><pre>" s start=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>78</td><td>0</td><td><pre>" u file 	s sc=##class(DataGen.Generator).generate(optionsStr)	"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>79</td><td>0</td><td><pre>" s end=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>80</td><td>0</td><td><pre>" c file"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>81</td><td>0</td><td><pre>" s total=end-start"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>82</td><td>0</td><td><pre>" w "" total time:""_total_$C(9)_"" rate:  ""_$NORMALIZE(count/total,2)_"" per second"",! }"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>83</td><td>0</td><td><pre>"zsimpleTest() public {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>84</td><td>0.000007</td><td><pre>"    s count=1000000"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>85</td><td>0.000002</td><td><pre>"    s res="""""</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>86</td><td>0.000006</td><td><pre>" s start=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>87</td><td>0.000002</td><td><pre>" for i=1:1:count {"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>88</td><td>5.981655</td><td><pre>" 	s name=##class(%Library.PopulateUtils).Name()"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>89</td><td>2.199197</td><td><pre>" 	s age=##class(%Library.PopulateUtils).Integer(10,20)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>90</td><td>0.243111</td><td><pre>" 	s res=name_age"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>91</td><td>0.170924</td><td><pre>" }"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>92</td><td>0.000004</td><td><pre>" s end=$P($ZTS,"","",2)"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>93</td><td>0</td><td><pre>" //c file"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>94</td><td>0.000001</td><td><pre>" s total=end-start"</pre></td></tr>
+<tr><td>DataGen.Benchmark.1</td><td>95</td><td>0.000006</td><td><pre>" w "" total time:""_total_$C(9)_"" rate:  ""_$NORMALIZE(count/total,2)_"" per second"",! }"</pre></td></tr>
+</table>
+
+
+    </body>
+</html>
